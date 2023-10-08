@@ -9,7 +9,6 @@ html {
 body {
     margin: 0 auto;
     padding: 0;
-
 }
 
 /* nav gehele bar */
@@ -33,7 +32,6 @@ nav a {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: all 0.2s ease-in;
-
 }
 
 .nav-item:hover a {
@@ -254,7 +252,6 @@ input {
     padding: 15px;
     font-size: 1rem;
     border-radius: 5px;
-
 }
 
 select {
