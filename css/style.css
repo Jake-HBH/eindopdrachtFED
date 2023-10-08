@@ -12,10 +12,6 @@ body {
 
 }
 
-#container {
-    margin: 0 auto;
-}
-
 /* nav gehele bar */
 nav {
     padding: 5px;
@@ -265,10 +261,10 @@ select {
     padding: 6px;
     font-size: 1rem;
     border: 0;
-
 }
 
 button {
+    margin: 20px;
     padding: 15px;
     font-size: 1rem;
     border: 0;
@@ -301,12 +297,12 @@ label {
     gap: 10px;
 }
 
-input:invalid {
+input,select,#message:invalid {
     border: 2px solid rgb(255, 0, 0);
     background-color: rgb(255, 255, 255);
 }
 
-input:valid {
+input,select,#message:valid {
     border: 3px solid rgb(67, 67, 67);
     background-color: rgb(255, 255, 255);
 }
