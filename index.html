@@ -13,13 +13,13 @@
         <nav class="navbar">
             <img src="images/varg_signature_black.webp" alt="Motor logo">
             <div class="nav-links">
+                <a href="#introduction" class="nav-item">Introduction</a>
                 <a href="#other-bikes-container" class="nav-item">Bikes</a>
-                <a href="#" class="nav-item">About Us</a>
-                <a href="#" class="nav-item">Contact</a>
-                <a href="#" class="nav-item">Privacy & Policy</a>
+                <a href="#form-container" class="nav-item">Contact</a>
+                <a href="#footer-link-container" class="nav-item">Privacy & Policy</a>
             </div>
         </nav>
-        <header>
+        <header id="introduction">
             <h1>Unlock Freedom: Discover Your Ideal Motorcycle</h1>
             <p>Welcome to Stark Future, your trusted destination for motorcycle enthusiasts looking to find their
                 perfect ride.
@@ -32,7 +32,7 @@
             <a href="https://www.kawasaki.nl/nl/products" class="header-links">Kawasaki Motors</a>
         </header>
         <main>
-            <section class="bikes-container">
+            <section id="bikes-container">
                 <h2>Bikes</h2>
                 <div id="other-bikes-container">
                     <article class="individual-bikes">
@@ -54,7 +54,8 @@
                                 Kawasaki
                                 Ninja H2R, and you'll understand why it's the ultimate fusion of art and engineering in
                                 the
-                                world of motorcycles.</p>
+                                world of motorcycles.
+                                Brace yourself for an adrenaline-soaked journey!</p>
                         </div>
                         <a href="#" class="button-default">Bekijk</a>
                     </article>
@@ -112,12 +113,8 @@
                 </div>
             </section>
 
-            <div class="form-container">
-                <section>
-                    <h1>Contactformulier</h1>
-                </section>
-
-
+            <div id="form-container">
+                <h1>Contactformulier</h1>
                 <form>
                     <div id="names-container">
                         <div class="box">
@@ -151,19 +148,19 @@
                     </div>
 
                     <div class="box">
-                        <label for="leraar" class="label">Subject</label>
-                        <select id="leraar" name="send-to" required>
-                            <option value="">Choose the subject of your e-mail...</option>
+                        <label for="subject" class="label">Subject</label>
+                        <select id="subject" name="send-to" required>
+                            <option value="" disabled selected>Choose the subject of your e-mail...</option>
                             <option value="0">Extra Information</option>
                             <option value="1">Apply At Our Place Of Work</option>
                             <option value="2 ">Question</option>
                             <option value="3">File A Complaint</option>
+                            <option value="4">Other</option>
                         </select>
                     </div>
 
-
+                    <label for="categorie">Sign in for newsletter?</label>
                     <div class="newsletter-container">
-                        <div><label for="categorie">Sign in for newsletter?</label></div>
                         <div>
                             <input type="radio" id="yes" name="category" value="yes">
                             <label for="yes">Yes</label>
@@ -175,7 +172,7 @@
                         </div>
                     </div>
 
-                    <div id="jouwvraag">
+                    <div id="message">
                         <label for="vraag" class="label">Message</label>
                         <textarea id="vraag" name="question" rows="7" cols="10"></textarea>
                     </div>
@@ -184,9 +181,7 @@
                         <input type="checkbox" id="accept" name="av" value="accept" required>
                         <label for="accept" class="label">I agree to the Terms and Conditions</label>
                     </div>
-
                     <button type="submit" class="label">Send e-mail</button>
-                    <p>* Verplichte velden</p>
                 </form>
             </div>
         </main>
@@ -205,7 +200,7 @@
                     <a href="#">Privacyverklaring</a>
                     <a href="#">Algemene voorwaarden</a>
                     <a href="#">Cookiebeleid</a>
-                    <a href="#">Contact</a>
+                    <a href="#form-container">Contact</a>
                 </div>
             </section>
         </footer>

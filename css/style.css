@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-
 * {
     box-sizing: border-box;
 }
@@ -33,7 +31,7 @@ nav {
 
 nav a {
     padding: 5px;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
@@ -51,6 +49,7 @@ nav a {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    margin: 20px;
 }
 
 .nav-item:hover {
@@ -58,17 +57,6 @@ nav a {
     border-left: 1px solid white;
     transform: scale(1.2);
 }
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 
 main {
     display: flex;
@@ -127,15 +115,17 @@ header p {
     font-weight: bold;
     padding: 20px 50px;
     margin: 30px 20px;
+
 }
 
 .header-links:hover {
     background-color: rgb(0, 0, 0);
     border: 3px solid rgb(255, 255, 255);
     color: white;
+    transition: all 0.5s ease-in;
 }
 
-.bikes-container {
+#bikes-container {
     filter: contrast(100%);
     color: white;
     border-top: 2px solid white;
@@ -148,11 +138,13 @@ header p {
     border-bottom: 2px solid white;
 }
 
-.bikes-container h3 {
-    font-size: 30px;
+#bikes-container h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
 
-.bikes-container article {
+#bikes-container article {
     margin: 60px;
     padding: 5px;
     flex: 1;
@@ -161,6 +153,7 @@ header p {
     border: 2px solid #9e9e9e;
     border-radius: 1vw;
     justify-content: space-between;
+    text-align: center;
 }
 
 .individual-bikes {
@@ -172,13 +165,13 @@ header p {
     transform: scale(1.1);
 }
 
-.bikes-container article img {
+#bikes-container article img {
     width: 100%;
     height: 50%;
     object-fit: contain;
 }
 
-.bikes-container h2 {
+#bikes-container h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +185,8 @@ header p {
 }
 
 .stars {
+    display: flex;
+    justify-content: center;
     font-size: 2rem;
 }
 
@@ -209,7 +204,6 @@ header p {
     color: black;
     font-weight: bolder;
     padding: 10px 20px;
-    margin: 30px 50px;
     text-align: center;
 }
 
@@ -219,18 +213,19 @@ header p {
     transition: all .4s ease;
 }
 
-.form-container {
+#form-container {
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    max-width: 100%;
+    max-width: 100vw;
     background-image: url(../images/wp647630.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
 }
 
 
@@ -239,35 +234,38 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 300px;
-
+    margin: 20px 300px;
 }
 
-.newsletter-container {
+#message,
+.box {
     display: flex;
     flex-direction: column;
     font-weight: bold;
     padding: 20px;
+    gap: 10px;
 }
 
-#jouwvraag {
+.newsletter-container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: column;
+    font-weight: bold;
     padding: 20px;
+    gap: 10px;
 }
 
 input {
     padding: 15px;
     font-size: 1rem;
     border-radius: 5px;
-}
 
+}
 
 select {
     padding: 6px;
     font-size: 1rem;
     border: 0;
+
 }
 
 button {
@@ -293,25 +291,18 @@ button:active {
 
 
 label {
-    font-weight: bold;
+    font-weight: bold;  
 }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-#names-container {
-    display: flex;
-}
-
+#names-container,
 #woonplaats-geboorte {
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 input:invalid {
-    border: 3px solid rgb(255, 135, 135);
+    border: 2px solid rgb(255, 0, 0);
     background-color: rgb(255, 255, 255);
 }
 
@@ -361,6 +352,10 @@ input:valid {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#footer-link-container a:hover {
+    color: #d1d1d1;
+}
+
 .logo {
     width: 9vw;
     height: 4vw;
@@ -371,19 +366,6 @@ input:valid {
     header {
         background-color: #000000;
         background-image: none;
-    }
-
-    .logo img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    #other-bikes-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -391,9 +373,30 @@ input:valid {
         position: relative;
     }
 
-    nav {
+
+    header h1,
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #other-bikes-container,
+    .bikes-container {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
+    }
+
+
+    nav a {
+        display: flex;
+        flex-direction: column;
     }
 
     .form-container {
@@ -401,6 +404,17 @@ input:valid {
         flex-direction: column;
         background-image: none;
         background-color: #252525;
+    }
+
+    #footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #footer-link-container {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -413,29 +427,56 @@ input:valid {
         position: relative;
     }
 
+    header h1,
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     header {
         background-color: #000000;
         background-image: none;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    #other-bikes-container {
+    nav a {
         display: flex;
         flex-direction: column;
+    }
+
+    #other-bikes-container,
+    .bikes-container {
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        background-color: #252525;
     }
 
     .form-container {
         display: flex;
         flex-direction: column;
+        background-image: none;
+        background-color: #252525;
     }
 
     #names-container {
         display: flex;
         flex-direction: column;
+    }
+
+    #footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #footer-link-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 }
