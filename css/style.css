@@ -326,7 +326,7 @@ input,select,#message:valid {
 }
 
 #footer-img-container img {
-    width: 40px;
+    width: 2vw;
     cursor: pointer;
 }
 
@@ -375,7 +375,7 @@ input,select,#message:valid {
     }
 
     .logo img {
-        max-width: 100%;
+        max-width: 5vw;
         height: auto;
     }
 
